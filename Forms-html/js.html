@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Info Form</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #f0f2f5;
+      padding: 20px;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #output {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #e9f7ef;
+      border: 1px solid #c3e6cb;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h3>Enter Student Info</h3>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter your email" />
+
+    <label for="course">Course:</label>
+    <input type="text" id="course" placeholder="Enter course name" />
+
+    <button onclick="displayInfo()">Submit</button>
+
+    <div id="output"></div>
+  </div>
+
+  <script>
+    function displayInfo() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var course = document.getElementById("course").value;
+
+     
+      var result = "<strong>Student Details:</strong><br>";
+      result += "Name: " + name + "<br>";
+      result += "Email: " + email + "<br>";
+      result += "Course: " + course;
+
+      document.getElementById("output").innerHTML = result;
+    }
+  </script>
+
+</body>
+</html>

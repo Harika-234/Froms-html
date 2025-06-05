@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UTS Student Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f4f8;
+      padding: 20px;
+    }
+
+    form {
+      background: #fff;
+      padding: 25px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .inline {
+      display: inline-block;
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      width: 120px;
+      padding: 10px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"] {
+      background-color: #28a745;
+    }
+
+    input[type="reset"] {
+      background-color: #dc3545;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #218838;
+    }
+
+    input[type="reset"]:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="#" method="post" enctype="multipart/form-data" autocomplete="on">
+    <h2>UTS Student Form</h2>
+
+    <div class="form-group">
+      <label for="studentname">Student Name:</label>
+      <input type="text" id="studentname" name="studentname" placeholder="Enter your name" required autofocus>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+    </div>
+
+    <div class="form-group">
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" min="1990-01-01" max="2025-12-31" required>
+    </div>
+
+    <div class="form-group">
+      <label for="tel">Phone Number:</label>
+      <input type="tel" id="tel" name="tel" placeholder="123-456-7890" required>
+    </div>
+
+    <div class="form-group">
+      <label for="website">Personal Website:</label>
+      <input type="url" id="website" name="website" placeholder="https://example.com">
+    </div>
+
+    <div class="form-group">
+      <label for="search">Search Topic:</label>
+      <input type="search" id="search" name="search" placeholder="Search here">
+    </div>
+
+    <div class="form-group">
+      <label for="color">Favorite Color:</label>
+      <input type="color" id="color" name="color">
+    </div>
+
+    <div class="form-group">
+      <label for="time">Preferred Study Time:</label>
+      <input type="time" id="time" name="time">
+    </div>
+
+    <div class="form-group">
+      <label for="week">Select Week:</label>
+      <input type="week" id="week" name="week">
+    </div>
+
+    <div class="form-group">
+      <label for="course">Select Course:</label>
+      <select id="course" name="course" required>
+        <option value="">-- Select your course --</option>
+        <option value="cs">Computer Science</option>
+        <option value="it">Information Technology</option>
+        <option value="eng">Engineering</option>
+        <option value="bus">Business</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" class="inline">
+      <label for="male" class="inline">Male</label>
+
+      <input type="radio" id="female" name="gender" value="female" class="inline">
+      <label for="female" class="inline">Female</label>
+
+      <input type="radio" id="other" name="gender" value="other" class="inline">
+      <label for="other" class="inline">Other</label>
+    </div>
+
+    <div class="form-group">
+      <label for="skills">Skills (hold Ctrl to select multiple):</label>
+      <select id="skills" name="skills[]" multiple>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JavaScript</option>
+        <option value="python">Python</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="documents">Upload Documents:</label>
+      <input type="file" id="documents" name="documents[]" multiple>
+    </div>
+
+    <div class="checkbox-group">
+    <label><input type="checkbox" name="agree" required> I agree to the terms and conditions</label>
+    </div>
+
+    <div class="buttons">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+
+      <h3>Audio Example</h3>
+      <audio controls>
+      <source src="audio-file.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+     </audio>
+
+     <h3>Video Example</h3>
+     <video width="400" height="200" controls>
+     <source src="react.js.mp4" type="video/mp4">
+       Your browser does not support the video tag.
+    </video>
+     <script>
+      localStorage.setItem("username", "Sreeharika");
+      sessionStorage.setItem("token", "abc123");
+
+     </script>
+
+    </div>
+  </form>
+
+</body>
+</html>
